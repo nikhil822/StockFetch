@@ -20,7 +20,7 @@ import "./dashboard.css";
 import { useState } from "react";
 import axios from "axios";
 
-const dashboard = () => {
+const dashboard = ({handleLogout}) => {
   const navigate = useNavigate();
   const [searchText, setSearchText] = useState("");
   const [stock, setStock] = useState({});
@@ -31,7 +31,7 @@ const dashboard = () => {
   const [openW, setOpenW] = useState(false);
 
   const url =
-    `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=IBM&apikey=${process.env.API}`;
+    `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=IBM&apikey=${import.meta.env.API}`;
 
   useEffect(() => {
     const fetchInfo = async () => {
@@ -98,7 +98,7 @@ const dashboard = () => {
               color="inherit"
               onClick={() => {
                 localStorage.removeItem("auth");
-                navigate("/");
+                handleLogout();
               }}
             >
               Logout

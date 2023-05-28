@@ -1,14 +1,15 @@
+// require('dotenv').config();
 import { initializeApp } from "firebase/app";
 import {getAuth, GoogleAuthProvider} from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAAZfmXILSisgVeX7E0f-31skYJWU9X_M8",
-  authDomain: "ventures-fe92a.firebaseapp.com",
-  projectId: "ventures-fe92a",
-  storageBucket: "ventures-fe92a.appspot.com",
-  messagingSenderId: "526363112017",
-  appId: "1:526363112017:web:adebd7b73a2764eb19fe70"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID
 };
 
 // Initialize Firebase
