@@ -40,7 +40,6 @@ const login = () => {
                     if (res.status === 200) {
                     localStorage.setItem('auth', true);
                     navigate('/dashboard');
-                    // notifySuccess('Logged in Successfully');
                     }
                 })
                 .catch((err) => {

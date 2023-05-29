@@ -6,21 +6,6 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
 
 function App() {
-  const [user, setUser] = useState(null)
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    const users = JSON.parse(localStorage.getItem("auth"))
-    if(users){
-      setUser(users)
-    }
-    console.log(users)
-  }, [])
-
-  const handleLogout = () => {
-    setUser(null);
-    navigate('/')
-  };
 
   return (
     <div>
@@ -28,7 +13,7 @@ function App() {
         <Route 
           exact
           path="/"
-          element={user ? <Dashboard handleLogout={handleLogout} /> : <Login />}
+          element={<Login />}
         />
         <Route 
           path="/signup"
@@ -36,7 +21,7 @@ function App() {
         />
         <Route
           path="/dashboard"
-          element={user ? <Dashboard handleLogout={handleLogout} /> : <Login />}
+          element={<Dashboard />}
         />
       </Routes>
       

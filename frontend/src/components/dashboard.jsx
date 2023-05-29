@@ -20,7 +20,7 @@ import "./dashboard.css";
 import { useState } from "react";
 import axios from "axios";
 
-const dashboard = ({handleLogout}) => {
+const dashboard = () => {
   const navigate = useNavigate();
   const [searchText, setSearchText] = useState("");
   const [stock, setStock] = useState({});
@@ -98,7 +98,7 @@ const dashboard = ({handleLogout}) => {
               color="inherit"
               onClick={() => {
                 localStorage.removeItem("auth");
-                handleLogout();
+                navigate('/')
               }}
             >
               Logout
