@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "stock-fetch",
+    "name": "stock_fetch",
     "builds": [
         { "src": "app.js", "use": "@vercel/node" }
     ],
