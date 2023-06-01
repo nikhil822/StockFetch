@@ -13,7 +13,7 @@ const login = () => {
     const [password, setPassword] = useState('')
 
     const handleLogin = () => {
-        axios.post('http://localhost:8080/api/auth/login', {
+        axios.post('https://stock-fetch-backend.vercel.app/api/auth/login', {
             email: email,
             password: password
         }, {
@@ -32,7 +32,7 @@ const login = () => {
     const signInWithGoogle = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
-                axios.post('http://localhost:8080/api/auth/google', {
+                axios.post('https://stock-fetch-backend.vercel.app/api/auth/google', {
                 name: result.user.displayName,
                 email: result.user.email,
                 })
