@@ -17,7 +17,7 @@ const signup = () => {
      * username, and name, and logs any errors or success messages.
      */
     const handleRegister = () => {
-        axios.post(`http://localhost:8080/api/auth/register`, {
+        axios.post(`https://stock-fetch-backend.vercel.app/api/auth/register`, {
             email: email,
             password: password,
             username: username,
