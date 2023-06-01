@@ -2,6 +2,8 @@
 
 Stock Price Dashboard
 
+Live Demo link: https://stock-fetch.vercel.app/
+
 ## Description
 
 This project is a web application built with the MERN (MongoDB, Express, React, Node.js) stack. It provides a dashboard that displays stock prices for a specific day, obtained from an API. The application also includes functionality to send the data via email or WhatsApp.
