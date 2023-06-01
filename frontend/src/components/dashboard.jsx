@@ -47,7 +47,7 @@ const dashboard = () => {
   }, []);
 
   const handleSend = () => {
-    axios.post(`http://localhost:8080/api/mail/sendemail`, {
+    axios.post(`https://stock-fetch-backend.vercel.app/api/mail/sendemail`, {
             email: email,
             date: date,
             price: price,
