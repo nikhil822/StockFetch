@@ -11,7 +11,7 @@ const mailRoutes = require('./routes/mailRoutes')
 
 app.use(
     cors({
-        origin: 'http://localhost:5173',
+        origin: 'https://stock-fetch.vercel.app',
         credentials: true
     })
 )
