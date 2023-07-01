@@ -1,6 +1,4 @@
-# Project Name
-
-Stock Price Dashboard
+# Stock Price Dashboard
 
 Live Demo link: https://stock-fetch.vercel.app/
 
